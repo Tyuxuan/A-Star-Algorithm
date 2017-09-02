@@ -1,2 +1,6 @@
 # A-Star-Algorithm
-a>b>c>d>e>f>g
+>>>>> a
+>>>> b
+>>> c
+>> b
+> e
