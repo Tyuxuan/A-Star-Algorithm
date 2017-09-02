@@ -6,6 +6,7 @@
 #include <vector>
 #include <algorithm>
 #include <conio.h>
+#include <stdlib.h>
 using namespace std;
 
 //declare variables
@@ -83,6 +84,7 @@ void makePath() {
 
 //other functions
 void init(){
+	int SE[2] = {0, 0};
 	cin >> x >> y;
 	for (int i = 0; i < x; i++) {
 		for (int j = 0; j < y; j++) {
@@ -99,6 +101,7 @@ void init(){
 					break;
 				}
 				case 'S': {
+					SE[0]++;
 					nowX = i;
 					nowY = j;
 					startX = i;
@@ -108,6 +111,7 @@ void init(){
 					break;
 				}
 				case 'E': {
+					SE[1]++;
 					endX = i;
 					endY = j;
 					break;
@@ -119,6 +123,10 @@ void init(){
 			}
 		}
 	}
+	cout << "Error" << endl;
+	getch();
+	exit(0);
+
 }
 void print(){
 	for (int i = 0; i < x; i++) {
